@@ -1,7 +1,17 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import myTheme from './myTheme';
+import { withInfo } from '@storybook/addon-info';
 
+addDecorator(
+  withInfo({
+
+    inline: true, 
+    source: true,
+    header: false,
+    propTables: false
+  })
+);
 addParameters({
   options: {
     theme: myTheme,

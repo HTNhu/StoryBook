@@ -2,7 +2,7 @@ import React from 'react';
 import  { Button }  from 'antd';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, object } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 
 storiesOf('Button', module)
 .addDecorator(withKnobs)
