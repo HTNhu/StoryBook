@@ -1,14 +1,11 @@
 import React from 'react';
 import  { Button }  from 'antd';
 import { action } from '@storybook/addon-actions';
-export default { title: 'Button' };
+import { storiesOf } from '@storybook/react';
+import { withKnobs, object } from '@storybook/addon-knobs/react';
 
-export const withText = () => 
-<div style={{ margin: '0 auto'}}>
-  <Button onClick={action('clicked')} type="primary" >Hello Button
-  </Button>
-</div>
-
-export const withEmoji = () => (
-  <Button type="primary" icon="like"></Button>
-)
+storiesOf('Button', module)
+.addDecorator(withKnobs)
+  .add('withText', () => <Button onClick={action('clicked')} type="primary" >Hello Button
+  </Button>)
+  .add('withEmoji', () =>   <Button type="primary" icon="like"></Button>)
