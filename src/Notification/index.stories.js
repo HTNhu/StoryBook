@@ -12,7 +12,7 @@ storiesOf('Notification', module)
         () => 
         notification[select("type",{success: 'success', error: 'error', warn: 'warn' }, 'success')]({
         message: text('message','Notification Title'),
-        placement:select('placement', { topLeft:'topLeft', topRight : 'topRight ', bottomRight: 'bottomRight', bottomLeft : 'bottomLeft '}, 'bottomLeft '),
+        placement:select('placement', { topLeft:'topLeft', topRight : 'topRight', bottomRight: 'bottomRight', bottomLeft : 'bottomLeft'}, 'bottomLeft'),
         description: text('description','This is the content of the notification. This is the content of the notification. This is the content of the notification.')
     })
 }
